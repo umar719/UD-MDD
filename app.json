@@ -45,15 +45,13 @@
     },
     "HEOKU_APP_NAME": {
       "description": "Heroku App Name"
-    
-      "SESSION_ID": {
-      "description": "your session id",
-      "required": true,
-      "value": ""
-    }
     },
     "AOTO_VOICS": {
       "description": "Auto voice feature (on = true, off = false)"
+    },
+    "SESSION_ID": {
+      "description": "Session ID for WhatsApp connection",
+      "value": "your-session-id-here"
     }
   },
   "formation": {
