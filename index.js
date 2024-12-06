@@ -18,13 +18,13 @@ const {
   const ownerNumber = [config.OWENR_NO]
   const l = console.log
 //===================SESSION============================
-if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
+if (!fs.existsSync(__dirname + '/Connector/creds.json')) {
 if(!global.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
 const sessdata = global.SESSION_ID.replace(/UMAR=/, "");
 const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
-fs.writeFile(__dirname + '/nero_auth_info_baileys/creds.json', data, () => {
+fs.writeFile(__dirname + '/Connector/creds.json', data, () => {
 console.log("Session Download Completed !!")
 })})}
   // <<==========PORTS===========>>
@@ -34,7 +34,7 @@ console.log("Session Download Completed !!")
   //====================================
   async function connectToWA() {
   console.log("Connecting To WhatsApp...");
-  const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/nero_auth_info_baileys/')
+  const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/Connector/')
   const conn = makeWASocket({
   logger: P({ level: 'silent' }),
   printQRInTerminal: true,
