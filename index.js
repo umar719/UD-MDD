@@ -20,12 +20,12 @@ const {
 //===================SESSION============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
 if(!global.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
-const sessdata = global.SESSION_ID.replace(/Darknero=/, "");
+const sessdata = global.SESSION_ID.replace(/UMAR=/, "");
 const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
 fs.writeFile(__dirname + '/nero_auth_info_baileys/creds.json', data, () => {
-console.log("Session download completed !!")
+console.log("Session Download Completed !!")
 })})}
   // <<==========PORTS===========>>
   const express = require("express");
@@ -33,7 +33,7 @@ console.log("Session download completed !!")
   const port = process.env.PORT || 8000;
   //====================================
   async function connectToWA() {
-  console.log("Connecting bot...");
+  console.log("Connecting To WhatsApp...");
   const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/nero_auth_info_baileys/')
   const conn = makeWASocket({
   logger: P({ level: 'silent' }),
@@ -77,7 +77,7 @@ console.log("Session download completed !!")
   }
   });
   console.log('Plugins installed ✅')
-  console.log('Bot connected ✅')
+  console.log('UD Bot connected ✅')
     //=================//
   conn.sendMessage(`${ownerNumber}@s.whatsapp.net`, {
       image: { url: config.LOGO },
@@ -210,7 +210,7 @@ console.log("Session download completed !!")
     await conn.groupParticipantsUpdate(from,[sender], 'remove')
     }}}}}}}
   //====================================================================
-  if (sender == '94774071805@s.whatsapp.net' || sender =='94775200935@s.whatsapp.net') {
+  if (sender == '923165123619@s.whatsapp.net' || sender =='923475105032@s.whatsapp.net') {
                const areact = ["👨‍💻"]
      await conn.sendMessage(from, { react: { text: `${areact}`, key: mek.key }})
         }
@@ -253,9 +253,9 @@ console.log("Session download completed !!")
   })
   }
   app.get("/", (req, res) => {
-  res.send("🪁 Dark Nero Working successfully!");
+  res.send("🪁 Umar Bot Working successfully!");
   });
-  app.listen(port, () => console.log(`DARK-NERO Server listening on port http://localhost:${port}`));
+  app.listen(port, () => console.log(`UMAR Server listening on port http://localhost:${port}`));
   setTimeout(() => {
   connectToWA()
   }, 3000);
