@@ -1,25 +1,22 @@
 {
-  "name": "DARK_NERO",
+  "name": "UD-MD",
   "description": "A WhatsApp MD bot built in Node.js to enhance the experience.",
-  "logo": "https://i.ibb.co/zrvByTb/IMG-20230609-WA0083.jpg",
+  "logo": "https://imgur.com/NxLHiOw.jpeg",
   "keywords": [
     "nodejs",
     "bot",
     "whatsapp bot",
-    "dark-nero",
-    "huttto",
-    "cyber_yakuza",
-    "nimesh",
-    "pahan",
+    "ud-md",
+    "umar-rehman",
     "multi device",
     "baileys",
-    "kaveesha"
+    "Umar"
   ],
   "success_url": "/",
   "stack": "container",
   "env": {
     "READ_MESSAGE": {
-      "description": "Red Message on = true, off = false"
+      "description": "Read Message on = true, off = false"
     },
     "ANTI_BAD": {
       "description": "Anti-ban on = true, off = false"
@@ -35,7 +32,7 @@
     },
     "OWENR_NO": {
       "description": "The owner's phone number",
-      "value": "94786802371"
+      "value": "923165123719"
     },
     "LOGO": {
       "description": "Add a custom alive logo URL"
