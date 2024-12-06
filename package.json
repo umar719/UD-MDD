@@ -1,14 +1,14 @@
 {
-"name": "Dark-Nero",
+"name": "UD-MD",
 "version": "9.0",
-"description": "Dark Nero Whatsapp User Bot",
+"description": "UD MD WHATSAPP USER BOT",
 "main": "index.js",
 "scripts": {
-"start": "pm2 start index.js --deep-monitoring --attach --name nero",
-"stop": "pm2 stop nero",
-"restart": "pm2 restart nero"
+"start": "pm2 start index.js --deep-monitoring --attach --name UMAR-MD",
+"stop": "pm2 stop UMAR-MD",
+"restart": "pm2 restart UMAR-MD"
 }, 
-"author": "Kaweesha",    
+"author": "Um4r719",    
 "dependencies": {
 "@adiwajshing/baileys": "git+https://github.com/WhiskeySockets/Baileys.git",
 "pino": "^7.0.5",
