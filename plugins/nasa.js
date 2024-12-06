@@ -1,5 +1,5 @@
 const config = require('../config')
-const { cmd, commands } = require('../darkneo')
+const { cmd, commands } = require('../command')
 const { getBuffer, fetchJson} = require('../lib/functions')
 
 cmd({
