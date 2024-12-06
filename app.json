@@ -1,0 +1,62 @@
+{
+  "name": "DARK_NERO",
+  "description": "A Whatsapp md bot built in NodeJs to make experience better",
+  "logo": "https://i.ibb.co/zrvByTb/IMG-20230609-WA0083.jpg",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "dark-nero", "huttto", "cyber_yakuza","nimesh","pahan","multi device","baileys","kaveesha"],
+  "success_url": "/",
+  "stack": "container",
+"env": {
+ 
+  
+
+
+
+  	  "READ_MESSAGE": {
+    "description": " Red Message     on= true     off =false "
+  },
+
+    
+      	  "ANTI_BAD": {
+    "description": " anti band on = true  off = false "
+  },
+
+
+       	  "ONLY_GROUP": {
+    "description": " only group  on = true  off = false "
+  },
+
+       	  "ANTI_LINK": {
+    "description": " anti link   on = true  off = false "
+  },
+   
+          	  "ALIVE": {
+    "description": "you  alive msg add "
+  },
+
+   "OWENR_NO": {
+    "description": "The phone numbers",
+       "value": "94786802371"
+  },	
+   
+
+             	  "LOGO": {
+    "description": "you  alive logo add "
+  },
+   "HEOKU_API_KEY" : {
+    "description": "Heroku API Key",	   
+   },
+    "HEOKU_APP_NAME" : {
+    "description": "Heroku App Name",	   
+   },
+   
+	  "AOTO_VOICS": {
+    "description": "AUTO VOICS ON OFF"
+  }
+},
+"formation": {
+		"worker": {
+			"quantity": 1,
+			"size": "basic"
+		}
+	}
+}
