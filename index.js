@@ -217,7 +217,7 @@ console.log("Session download completed !!")
     //====================================================================
 
         if(config.AOTO_VOICS == 'true' ) {
-  const url = 'https://raw.githubusercontent.com/Um4r719/UD-MD-DATABASE/refs/heads/main/UMAR_VOICE/CONNECTOR/UD-MD'
+  const url = 'https://gist.githubusercontent.com/Um4r719/22fee42c54e943b3e5d309714c9c0d56/raw/'
   let { data } = await axios.get(url)
   for (vr in data){
   if((new RegExp(`\\b${vr}\\b`,'gi')).test(body)) conn.sendMessage(from,{audio: { url : data[vr]},mimetype: 'audio/mpeg',ptt:true},{quoted:mek})   
