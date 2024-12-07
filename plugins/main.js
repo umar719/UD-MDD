@@ -11,13 +11,13 @@ cmd({
     use: '.alive',
     filename: __filename
 },
-async(conn, mek, m,{from, l, quoted, body, isCmd, darkneo, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+async(conn, mek, m,{from, l, quoted, body, isCmd, umar, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-     await conn.sendMessage(from, { audio: fs.readFileSync('./src/Umar.mp3') , ptt: true  , mimetype: 'audio/mpeg'}, { quoted: mek })  
+     await conn.sendMessage(from, { audio: fs.readFileSync('./src/alive.mp3') , ptt: true  , mimetype: 'audio/mpeg'}, { quoted: mek })  
     await conn.sendMessage(from, { image: { url: config.LOGO }, caption: config.ALIVE    , contextInfo:   { externalAdReply: {  showAdAttribution: true }}},{ quoted: mek })
-                       /*
-                       ,headerType: 4,
+                    
+                     ,headerType: 4,
                     contextInfo:{externalAdReply:{
                     title:`Alive Message`,
                     body:`Um4r719`,
@@ -83,7 +83,7 @@ cmd({
 
 },
 
-async(conn, mek, m,{from, l, quoted, body, isCmd, darkneo, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+async(conn, mek, m,{from, l, quoted, body, isCmd, umar, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 
 try{
 
@@ -179,7 +179,7 @@ let menumg =`*Hello* ${pushname}
 ╰────────────⦁
 \`\`\`\``
 
- await conn.sendMessage(from, { audio: fs.readFileSync('./src/menu.aac') , ptt: true  , mimetype: 'audio/mpeg'}, { quoted: mek })  
+ await conn.sendMessage(from, { audio: fs.readFileSync('./src/menu.mp3') , ptt: true  , mimetype: 'audio/mpeg'}, { quoted: mek })  
 await conn.sendMessage(from, { image: { url: config.LOGO }, caption: menumg }, { quoted: mek })
 
 } catch (e) {
