@@ -16,8 +16,8 @@ try{
 
      await conn.sendMessage(from, { audio: fs.readFileSync('./src/alive.mp3') , ptt: true  , mimetype: 'audio/mpeg'}, { quoted: mek })  
     await conn.sendMessage(from, { image: { url: config.LOGO }, caption: config.ALIVE    , contextInfo:   { externalAdReply: {  showAdAttribution: true }}},{ quoted: mek })
-                    
-                     ,headerType: 4,
+                
+                      /* ,headerType: 4,
                     contextInfo:{externalAdReply:{
                     title:`Alive Message`,
                     body:`Um4r719`,
