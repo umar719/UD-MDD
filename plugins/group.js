@@ -4,7 +4,8 @@ const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, 
 
 
 // Utility function for delay
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const pluginSleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 
 // Delay in milliseconds
 const KICK_DELAY_MS = 2000; // Change this value for faster/slower execution
