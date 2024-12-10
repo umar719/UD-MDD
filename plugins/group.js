@@ -680,37 +680,3 @@ reply(`❌ *Error Accurated !!*\n\n${e}`)
 }
 } )
 
-cmd({
-    pattern: "ginfo",
-    react: "🥏",
-    alias: ["groupinfo"],
-    desc: "Get group informations.",
-    category: "group",
-    use: '.ginfo',
-    filename: __filename
-},
-async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
-try{
-const msr = (await fetchJson('https://raw.githubusercontent.com/Um4r719/UD-MD-DATA/refs/heads/main/DATABASE/mreply.json')).replyMsg
-
-if (!isGroup) return reply(msr.only_gp)
-if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
-if (!isBotAdmins) return reply(msr.give_adm)
-const metadata = await conn.groupMetadata(from) 
-let ppUrl = await conn.profilePictureUrl( from , 'image')
-const gdata = `\n*${metadata.subject}*
-
-🐉 *Group Jid* - ${metadata.id}
-
-📬 *Participant Count* - ${metadata.size}
-
-👤 *Group Creator* - ${metadata.owner}
-
-📃 *Group Description* - ${metadata.desc}\n\n`
-await conn.sendMessage(from,{image:{url: ppUrl },caption: gdata + config.FOOTER },{quoted:mek })
-} catch (e) {
-await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-console.log(e)
-reply(`❌ *Error Accurated !!*\n\n${e}`)
-}
-} )
